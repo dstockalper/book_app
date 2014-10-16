@@ -1,7 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+genre_sci_fi =    Genre.create!({ name: "Sci-Fi" })
+genre_fantasy =   Genre.create!({ name: "Fantasy" })
+genre_biography = Genre.create!({ name: "Biography" })
+genre_fiction =   Genre.create!({ name: "Fiction" })
+
+Book.create!([
+    {
+        title: "The Darkness That Comes Before",
+        author: "R. Scott Bakker",
+        genre: genre_fantasy
+    },
+    {
+        title: "Jitterbug Perfume",
+        author: "Tom Robbins",
+        genre: genre_fiction
+    }
+])
