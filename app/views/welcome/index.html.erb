@@ -1,0 +1,16 @@
+<section id="books">
+
+    <h1>Books</h1>
+
+    <% @books.each do |book| %>
+
+        <div class="book">
+            <h2 class="title"><%= book.title %></h2>
+            by <span class="author"><%= book.author %></span>
+            <br />
+            <strong>Genre</strong>: <span class="genre"><%= book.genre.name %></span>
+        </div>
+
+    <% end %>
+
+</section>
